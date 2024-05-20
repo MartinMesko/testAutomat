@@ -32,7 +32,7 @@ public class MultipleOfANumberTesterUnitTest {
     @ParameterizedTest
     @MethodSource("task.TestDataGenerator#loadTestData")
     public void testMain_DivisibleNumbers(String studentPath) {
-        String input = "10\n5\n";
+        String input = "10" + System.lineSeparator() + "5" + System.lineSeparator();
         System.setIn(new ByteArrayInputStream(input.getBytes()));
 
         // Kontrola, či trieda obsahuje metódu main
@@ -53,7 +53,7 @@ public class MultipleOfANumberTesterUnitTest {
     @ParameterizedTest
     @MethodSource("task.TestDataGenerator#loadTestData")
     public void testMain_NotDivisibleNumbers(String studentPath) {
-        String input = "10\n3\n";
+        String input = "10" + System.lineSeparator() + "3" + System.lineSeparator();
         System.setIn(new ByteArrayInputStream(input.getBytes()));
 
         // Kontrola, či trieda obsahuje metódu main
